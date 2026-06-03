@@ -571,6 +571,82 @@ h3 {
   color: var(--muted);
 }
 
+.request-section {
+  background: var(--soft);
+}
+
+.request-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.request-grid > div p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.request-form {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.request-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.request-form .address-field[hidden] {
+  display: none;
+}
+
+.request-form input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  padding: 0 12px;
+  font: inherit;
+}
+
+.request-form input:focus {
+  outline: 2px solid rgba(113, 24, 41, 0.18);
+  border-color: var(--accent);
+}
+
+.delivery-toggle {
+  min-height: 42px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent);
+  padding: 0 14px;
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+}
+
+.delivery-toggle.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.form-status {
+  min-height: 20px;
+  margin-bottom: 0;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .contact-grid {
   display: grid;
   gap: 18px;
@@ -666,6 +742,7 @@ h3 {
   }
 
   .split,
+  .request-grid,
   .contact-grid {
     grid-template-columns: minmax(0, 1fr) 360px;
     align-items: center;
@@ -720,7 +797,8 @@ h3 {
   }
 
   .btn.secondary:hover,
-  .chip:hover {
+  .chip:hover,
+  .delivery-toggle:hover {
     border-color: var(--accent);
   }
 

@@ -16,6 +16,7 @@
           <a href="#catalog">Каталог</a>
           <a href="#selection">Подбор аромата</a>
           <a href="#delivery">Доставка</a>
+          <a href="#request">Заявка</a>
           <a href="#contacts">Контакты</a>
         </nav>
       </div>
@@ -288,6 +289,37 @@
         </div>
       </section>
 
+      <section class="section request-section" id="request">
+        <div class="container request-grid">
+          <div>
+            <p class="eyebrow">Заявка</p>
+            <h2>Оставьте контакты, мы уточним аромат и наличие</h2>
+            <p>Можно заказать флакон, миниатюру или подборку пробников. Если нужна доставка, добавьте адрес.</p>
+          </div>
+          <form class="request-form">
+            <label>
+              Имя
+              <input type="text" name="firstName" placeholder="Анна" autocomplete="given-name" required>
+            </label>
+            <label>
+              Фамилия
+              <input type="text" name="lastName" placeholder="Иванова" autocomplete="family-name" required>
+            </label>
+            <label>
+              Номер телефона
+              <input type="tel" name="phone" placeholder="+7 999 000-00-00" autocomplete="tel" required>
+            </label>
+            <button class="delivery-toggle" type="button" aria-expanded="false">Доставка</button>
+            <label class="address-field" hidden>
+              Адрес доставки
+              <input type="text" name="address" placeholder="Город, улица, дом, квартира" autocomplete="street-address">
+            </label>
+            <button class="btn primary" type="submit">Подать заявку</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
       <section class="section contacts" id="contacts">
         <div class="container contact-grid">
           <div>
@@ -307,7 +339,7 @@
     <div class="mobile-actions" aria-label="Быстрые действия">
       <a href="tel:+79990000000">Позвонить</a>
       <a href="https://t.me/" target="_blank" rel="noreferrer">Telegram</a>
-      <a href="#catalog">Каталог</a>
+      <a href="#request">Заявка</a>
     </div>
 
     <script src="script.js"></script>
